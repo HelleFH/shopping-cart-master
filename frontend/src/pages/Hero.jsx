@@ -8,7 +8,7 @@ const Hero = () => {
   const getAllProducts = async () => {
     try {
       const { data } = await axios(
-        "https://ecommerce-backend-new.vercel.app/api/products"
+        "https://json-server-vercel-main-helles-projects.vercel.app/api/products"
       );
       setProducts(data);
     } catch (error) {

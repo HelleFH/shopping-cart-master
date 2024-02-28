@@ -57,14 +57,14 @@ const CartCard = ({ item }) => {
       </div>
       <div className="flex text-right max-w-[120px] flex-col justify-between">
         <h2 className="ml-[20px] text-center font-semibold text-slate-600">
-          {"₹ "}
+          {"£"}
           <span className="text-black">
-            {Math.ceil(item.product.price * 81)}
+            {Math.ceil(item.product.price)}
           </span>
         </h2>
         <h2
           onClick={() => removeCart(item.product.id)}
-          className="cursor-pointer text-right text-red-500"
+          className="cursor-pointer text-right text-500"
         >
           Remove
         </h2>

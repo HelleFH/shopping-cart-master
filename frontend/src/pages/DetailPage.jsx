@@ -13,7 +13,7 @@ const DetailPage = () => {
   const getSingleProduct = async () => {
     try {
       const { data, status } = await axios(
-        `https://ecommerce-backend-new.vercel.app/api/products/${id}`
+        `https://json-server-vercel-main-helles-projects.vercel.app/api/products/${id}`
       );
       setSingleProduct(data);
     } catch (error) {
@@ -53,8 +53,8 @@ const DetailPage = () => {
                   <div>
                     <h2 className="text-[16px] font-[600]">
                       {"₹  "}
-                      <span className="text-red-500">
-                        {Math.ceil(singleProduct?.price * 81)}
+                      <span className="text-500">
+                        {Math.ceil(singleProduct?.price )}
                       </span>
                     </h2>
                     <h2 className="text-[16px] font-[400]">
@@ -69,9 +69,7 @@ const DetailPage = () => {
                   </h2>
                   <h2 className="text-[16px] font-[400]">
                     Quantity :{" "}
-                    <span className="font-[700]">
-                      {singleProduct?.rating?.count} nos
-                    </span>
+                
                   </h2>
                   <div className="flex items-center justify-start gap-2 md:gap-5">
                     <button className="cursor-pointer rounded-[4px] bg-sky-600 px-[30px] py-[10px] font-[600] text-white hover:opacity-80 lg:px-[60px]">

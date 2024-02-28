@@ -17,7 +17,7 @@ const InputField = ({
         {"*"}
       </label>
       {errors[name] && touched[name] ? (
-        <span className="text-red-500">{errors[name]}</span>
+        <span className="text-500">{errors[name]}</span>
       ) : null}
       <input
         className="w-full my-2 outline-none rounded-[8px] bg-gray-100 p-4"

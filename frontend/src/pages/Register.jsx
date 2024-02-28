@@ -49,25 +49,26 @@ const Register = () => {
   }, [user]);
 
   return (
-    <Layout>
+<Layout>
       <section className="w-full h-full py-5 flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
           className="w-[550px] shadow-md p-8 sm:p-10 rounded-2xl bg-white"
         >
-          <h2 className="font-extrabold text-[26px] tracking-widest">
+          <h2 className="font-extrabold text-2xl tracking-widest mb-6">
             Get Started
           </h2>
 
-          <p className="pt-6">
+          <p className="text-sm">
             Already have an account?
             <span
-              onClick={() => navigate("/login")}
-              className="text-blue-500 underline cursor-pointer"
+              onClick={() => navigate('/login')}
+              className="text-blue-500 underline cursor-pointer ml-1"
             >
               Login
             </span>
           </p>
+
           {formValues.map((item, id) => (
             <InputField
               key={id}
@@ -81,9 +82,10 @@ const Register = () => {
               handleBlur={handleBlur}
             />
           ))}
+
           <button
             type="submit"
-            className="text-[18px] hover:bg-black hover:text-white my-4 w-full py-4 rounded-[8px] border-[1px] border-black font-semibold"
+            className="text-lg bg-black text-white py-4 rounded-8px border-2 border-black font-semibold w-full mt-6 hover:bg-gray-800 transition-all duration-300"
           >
             Register
           </button>

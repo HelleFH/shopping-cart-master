@@ -29,8 +29,8 @@ const ProductCard = ({ item }) => {
           {productName(item.title)}
         </h2>
         <h2 className="text-center">
-          {"₹  "}
-          <span className="text-red-500">{Math.ceil(item.price * 81)}</span>
+          {"£"}
+          <span className="text-500">{Math.ceil(item.price )}</span>
         </h2>
       </div>
       <div className="">
@@ -42,9 +42,7 @@ const ProductCard = ({ item }) => {
         </button>
       </div>
 
-      <div className="absolute top-2 left-2 rounded-[50%] w-[30px] h-[30px] flex items-center justify-center text-[13px] font-[400] text-white bg-pink-500">
-        {item.rating.count}
-      </div>
+  
     </div>
   );
 };

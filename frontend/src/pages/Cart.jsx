@@ -25,7 +25,7 @@ const Cart = () => {
     cart?.reduce(
       (acc, item) => acc + item.product.price * item.quantity,
       initialValue
-    ) * 81
+    ) 
   );
 
   return (
@@ -50,19 +50,13 @@ const Cart = () => {
             <div className="rounded-[4px] shadow-lg">
               <div className="flex flex-col rounded-[4px] bg-slate-200 p-[15px]">
                 <h2 className="text-[18px] font-[700]">You Pay</h2>
-                <h3>Check Our order Policy</h3>
               </div>
-              <div className="rounded-[4px] bg-slate-600 p-[15px] text-white">
-                You Can Pay .... on This Order
-              </div>
+          
               <div className="flex flex-col gap-[8px] rounded-[4px] bg-slate-50 p-[15px]">
                 <h2 className="border-b-[1px] py-[4px] text-[18px] font-[700]">
-                  Total Price {"₹"} {total}
+                  Total Price {"£"} {total}
                 </h2>
-                <h3 className="border-b-[1px] py-[4px]">
-                  Distributor Price -20
-                </h3>
-                <h3 className="border-b-[1px] py-[4px]">Discount 40</h3>
+          
               </div>
             </div>
           </div>
