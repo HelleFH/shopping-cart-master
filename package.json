@@ -1,0 +1,12 @@
+{
+  "name": "shopping-cart-master",
+  "version": "1.0.0",
+  "description": "This is a MERN (MongoDB, Express.js, React, Node.js)  shopping cart project that allows users to browse products online. It includes features like user authentication, cart management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
