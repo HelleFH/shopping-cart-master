@@ -1,12 +1,14 @@
 {
-  "name": "shopping-cart-master",
+  "name": "mern-deploy",
   "version": "1.0.0",
-  "description": "This is a MERN (MongoDB, Express.js, React, Node.js)  shopping cart project that allows users to browse products online. It includes features like user authentication, cart management.",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-
+    "install-server": "cd backend && npm install",
+    "start-server": "cd backend && node app.js",
+    "install-client": "cd client && npm install",
+    "build-client": "cd client && npm run build",
+    "start-client": "cd client && npm run start"
   },
   "keywords": [],
   "author": "",
