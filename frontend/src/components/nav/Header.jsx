@@ -26,30 +26,25 @@ const Header = () => {
   }, [user]);
 
   return (
-    <header className="bg-white z-10 border-b-[1px] sticky top-0 text-black backdrop-blur-lg px-5 py-4 flex items-center justify-between">
-      <div className="">
-        <h2
-          onClick={() => navigate("/")}
-          className="font-extrabold text-[26px] cursor-pointer tracking-wide sm:tracking-widest"
-        >
-          Shopping Cart
-        </h2>
+    <header style={{ backgroundColor: "#008472", color: "#F0F0F0" }} className="z-10 border-b-[1px] sticky top-0 text-black backdrop-blur-lg px-5 py-4 flex items-center justify-between">
+      <div >
+        <div className="flex justify-center items-center gap-2" onClick={() => navigate("/")}>
+
+          <img src="\public\logo-color.png" style={{ maxWidth: "100px" }}></img>
+          <h2
+            className="font-extrabold hover:text-gray-400 text-[26px] cursor-pointer tracking-wide sm:tracking-widest">Home  </h2>
+        </div>
       </div>
       <div className="hidden sm:block">
         <ul className="flex items-center gap-3 text-[18px] font-semibold">
           <li>
-            <NavLink
-              to={"/"}
-              className={({ isActive }) => (isActive ? "text-blue-400" : "")}
-            >
-              Home
-            </NavLink>
+
           </li>
           {!user && (
             <li>
               <NavLink
                 to={"/login"}
-                className={({ isActive }) => (isActive ? "text-blue-400" : "")}
+                className={({ isActive }) => (isActive ? "text-black" : "")}
               >
                 Login
               </NavLink>
@@ -58,33 +53,37 @@ const Header = () => {
         </ul>
       </div>
       <div className="flex items-center gap-3 text-[16px] relative">
-        <NavLink
-          to={"/cart"}
-          className={({ isActive }) => (isActive ? "text-blue-400" : "")}
-        >
-          <HiShoppingCart className="cursor-pointer relative" size={30} />
-          {user && (
-            <button className="absolute top-[-15px] w-6 h-6 left-4 rounded-full bg-blue-500 text-white border-[1px] text-center">
-              <span className="translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]">
-                {totalCart}
-              </span>
-            </button>
-          )}
-        </NavLink>
-        {user ? (
-          <HiUserCircle
-            className="cursor-pointer"
-            size={30}
-            onClick={() => setShowMenu((pre) => !pre)}
-          />
-        ) : (
-          <NavLink
-            to={"/login"}
-            className={({ isActive }) => (isActive ? "text-blue-400" : "")}
-          >
-            <HiUserCircle className="cursor-pointer" size={30} />
-          </NavLink>
-        )}
+      <NavLink to={"/cart"} className="group">
+  <HiShoppingCart className="cursor-pointer relative group-hover:text-gray-400" size={30} />
+  {user && (
+    <button
+      style={{ backgroundColor: "#ca9176", color: "#F0F0F0" }}
+      className="absolute top-[-15px] w-6 h-6 left-4 rounded-full bg-blue-500 text-white border-[1px] text-center"
+    >
+      <span className="translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]">
+        {totalCart}
+      </span>
+    </button>
+  )}
+</NavLink>
+
+{user ? (
+  <HiUserCircle
+    className="cursor-pointer"
+    size={30}
+    onClick={() => setShowMenu((pre) => !pre)}
+  />
+) : (
+  <NavLink to={"/login"} className="group ">
+    <HiUserCircle
+      style={{}}
+      className="cursor-pointer  group-hover:text-gray-400"
+      size={30}
+    />
+  </NavLink>
+)}
+
+  
 
         {showMenu && <UserMenu setShowMenu={setShowMenu} />}
       </div>

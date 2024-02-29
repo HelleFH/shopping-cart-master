@@ -31,8 +31,8 @@ const Cart = () => {
   return (
     <Layout>
       <div className="flex min-h-screen w-full flex-col py-5 gap-5 md:flex-row lg:p-[60px]">
-        <div className="w-full text-slate-600 md:w-[70%] shadow-md border-[1px] bg-white p-2 rounded-lg">
-          <div className="my-[40px] flex flex-col rounded-[4px] bg-slate-100  md:p-[15px]">
+        <div className="w-full  md:w-[70%] shadow-md border-[1px] bg-white p-2 rounded-lg">
+          <div style={{ backgroundColor: "#1f262b", color: "#F0F0F0" }} className=" my-[40px] flex flex-col rounded-[4px] md:p-[15px]">
             <h2 className="text-[18px] font-[700]">Your Cart</h2>
             <h3>Total Itemes : {cart?.length} </h3>
           </div>
@@ -48,8 +48,8 @@ const Cart = () => {
         {cart?.length ? (
           <div className="my-[40px] flex w-full flex-col md:w-[30%] md:p-[8px]">
             <div className="rounded-[4px] shadow-lg">
-              <div className="flex flex-col rounded-[4px] bg-slate-200 p-[15px]">
-                <h2 className="text-[18px] font-[700]">You Pay</h2>
+              <div style={{ backgroundColor: "#1f262b", color: "#F0F0F0" }} className="flex flex-col rounded-[4px] bg-slate-200 p-[15px]">
+                <h2 className="text-[18px] font-[700]">Overview</h2>
               </div>
           
               <div className="flex flex-col gap-[8px] rounded-[4px] bg-slate-50 p-[15px]">

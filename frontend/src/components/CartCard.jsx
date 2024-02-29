@@ -6,9 +6,7 @@ import { useAppStore } from "../../store/appStore";
 const CartCard = ({ item }) => {
   const { removeCart, addCartQty, removeCartQty } = useAppStore();
   const productName = (name) => {
-    if (name.length > 20) {
-      return name.substring(0, 20) + "...";
-    }
+
     return name;
   };
   const navigate = useNavigate();
@@ -22,10 +20,10 @@ const CartCard = ({ item }) => {
           alt=""
         />
       </div>{" "}
-      <div className="overflow-hidden">
+      <div className="text-nowrap">
         <h2
           onClick={() => navigate(`/product/${item.product.id}`)}
-          className="cursor-pointer text-[16px] text-slate-600"
+          className="text-nowrap cursor-pointer font-bold text-[16px]"
         >
           {productName(item.product.title)}
         </h2>
@@ -37,7 +35,7 @@ const CartCard = ({ item }) => {
               ? removeCart(item.product.id)
               : removeCartQty(item.product.id);
           }}
-          className="flex relative bg-white md:h-[30px] md:w-[30px] h-[24px] w-[24px] items-center justify-center rounded-full border-[1px] p-[2px] text-center text-[35px] shadow-xl"
+          className="flex relative bg-white md:h-[30px] md:w-[30px] h-[24px] w-[24px] items-center justify-center rounded-full border-[1px] p-[2px] text-center text-[35px] "
         >
           <span className="translate-x-[-50%] absolute translate-y-[-50%] top-[50%] left-[50%]">
             <HiMinus size={12} />
@@ -47,7 +45,7 @@ const CartCard = ({ item }) => {
         <div>
           <button
             onClick={() => addCartQty(item.product.id)}
-            className="flex bg-white relative md:h-[30px] md:w-[30px] h-[24px] w-[24px] items-center justify-center rounded-full border-[1px] p-[2px] text-center text-[18px] shadow-xl"
+            className=" relative md:h-[30px] md:w-[30px] h-[24px] w-[24px] items-center justify-center rounded-full border-[1px] p-[2px] text-center text-[18px]"
           >
             <span className="translate-x-[-50%] absolute translate-y-[-50%] top-[50%] left-[50%]">
               <HiPlus size={12} />
@@ -56,7 +54,7 @@ const CartCard = ({ item }) => {
         </div>
       </div>
       <div className="flex text-right max-w-[120px] flex-col justify-between">
-        <h2 className="ml-[20px] text-center font-semibold text-slate-600">
+        <h2 className="ml-[20px] text-center font-semibold ">
           {"£"}
           <span className="text-black">
             {Math.ceil(item.product.price)}
@@ -64,7 +62,7 @@ const CartCard = ({ item }) => {
         </h2>
         <h2
           onClick={() => removeCart(item.product.id)}
-          className="cursor-pointer text-right text-500"
+          className="cursor-pointer text-right text-red-500"
         >
           Remove
         </h2>

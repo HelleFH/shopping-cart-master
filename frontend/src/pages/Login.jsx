@@ -68,9 +68,9 @@ const Login = () => {
           <h2 className="text-blue-500 py-3 underline text-right cursor-pointer">
             forgot-password
           </h2>
-          <button
+          <button style={{ backgroundColor: "#ca9176", color: "#F0F0F0" }}
             type="submit"
-            className="text-[18px] hover:bg-black hover:text-white my-4 w-full py-4 rounded-[8px] border-[1px] border-black font-semibold"
+            className="text-[18px] hover:bg-black hover:text-white my-4 w-full py-4  font-semibold"
           >
             Login
           </button>

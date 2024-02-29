@@ -34,7 +34,7 @@ const DetailPage = () => {
           <>
             {singleProduct ? (
               <>
-                <div className="flex h-[320px] w-full items-center justify-center md:h-[550px] md:w-[450px]">
+                <div className="flex h-[320px] w-full items-center justify-center  md:w-[450px]">
                   <img
                     src={singleProduct?.image}
                     className="h-full w-full object-contain"
@@ -52,17 +52,12 @@ const DetailPage = () => {
                   </div>
                   <div>
                     <h2 className="text-[16px] font-[600]">
-                      {"₹  "}
-                      <span className="text-500">
-                        {Math.ceil(singleProduct?.price )}
+                      {"£"}
+                      <span className="">
+                        {Math.ceil(singleProduct?.price)}
                       </span>
                     </h2>
-                    <h2 className="text-[16px] font-[400]">
-                      Rating {": "}
-                      <span className="font-[700]">
-                        {singleProduct?.rating?.rate}
-                      </span>
-                    </h2>
+                    
                   </div>
                   <h2 className="text-[16px] font-[400] text-slate-500">
                     {singleProduct?.description}
@@ -72,12 +67,10 @@ const DetailPage = () => {
                 
                   </h2>
                   <div className="flex items-center justify-start gap-2 md:gap-5">
-                    <button className="cursor-pointer rounded-[4px] bg-sky-600 px-[30px] py-[10px] font-[600] text-white hover:opacity-80 lg:px-[60px]">
-                      Buy Now
-                    </button>
-                    <button
+                
+                    <button style={{ backgroundColor: "#ca9176", color: "#F0F0F0" }}
                       onClick={() => addCart(singleProduct, navigate)}
-                      className="cursor-pointer rounded-[4px] bg-teal-600 px-[60px] py-[10px] font-[600] text-white hover:opacity-80"
+                      className="cursor-pointer px-[60px] py-[10px] font-[600] text-white hover:opacity-80"
                     >
                       Add To Cart
                     </button>

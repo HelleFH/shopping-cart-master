@@ -9,7 +9,6 @@ const cartSchema = mongoose.Schema(
           title: { type: String, required: true },
           price: Number,
           description: { type: String, required: true },
-          rating: { rate: { type: Number } },
           category: { type: String, required: true },
           image: { type: String, required: true },
         },

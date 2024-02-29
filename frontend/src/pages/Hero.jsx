@@ -20,7 +20,7 @@ const Hero = () => {
   }, []);
   return (
     <Layout>
-      <section className="grid py-10 grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <section className="grid py-10 grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 ml-10 mr-10 mt-4">
         {products?.map((item, id) => (
           <ProductCard item={item} key={id} />
         ))}

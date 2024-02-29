@@ -13,9 +13,9 @@ const UserMenu = ({ setShowMenu }) => {
       ref={userRef}
       className="flex absolute top-10 border-[1px] w-fit font-semibold flex-col gap-2 bg-white p-4 shadow-md rounded-md"
     >
-      <h2 className="text-gray-500 shrink-0">{user?.name}</h2>
+      <h2 className="text-black  shrink-0">{user?.name}</h2>
       <h2
-        className="cursor-pointer"
+        className="cursor-pointer hover:text-black"
         onClick={() => logout(navigate, setShowMenu)}
       >
         Logout

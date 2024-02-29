@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {  font-family: 'Roboto';}
+button {background-color: "#ca9176" !important; color: "#F0F0F0";}
+button:hover {background-color: #9e715c !important;}
+button:active {transform: scale(0.99);}
+.group:hover {
+  color: #ccc; /* Change this to your desired gray color */
+}
 
 .loader {
   width: 48px;

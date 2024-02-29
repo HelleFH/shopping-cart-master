@@ -19,7 +19,7 @@ export const useAppStore = create((set, get) => ({
         data: { ...details },
       });
       if (status === 200) {
-        toast.success("Login successfully");
+        toast.success("You are logged in");
         set((state) => ({ loading: false, user: data.user }));
         localStorage.setItem("user", JSON.stringify(data.user));
         navigate("/");
@@ -61,7 +61,7 @@ export const useAppStore = create((set, get) => ({
         },
       });
       if (status === 200) {
-        toast.success("Added to cart successfully");
+        toast.success("Added to cart");
         set((state) => ({
           loading: false,
           totalCart: data.total,
@@ -85,7 +85,7 @@ export const useAppStore = create((set, get) => ({
         data: { productId: id },
       });
       if (status === 200) {
-        toast.success("Added to cart successfully");
+        toast.success("Item added");
         let cart = get().cart;
         const updatedCart = cart.map((item) =>
           item.product.id === id
@@ -112,7 +112,7 @@ export const useAppStore = create((set, get) => ({
         data: { productId: id },
       });
       if (status === 200) {
-        toast.success("Added to cart successfully");
+        toast.success("Item removed");
         let cart = get().cart;
         const updatedCart = cart.map((item) =>
           item.product.id === id
@@ -167,7 +167,7 @@ export const useAppStore = create((set, get) => ({
         data: { id },
       });
       if (status === 200) {
-        toast.success("Item removed successfully");
+        toast.success("Item removed");
         let cart = get().cart;
         const updatedCart = cart.filter((item) => item.product.id !== id);
         set((state) => ({
@@ -195,7 +195,7 @@ export const useAppStore = create((set, get) => ({
         set(() => ({ loading: false, user: null }));
         localStorage.clear();
         navigate("/");
-        toast.success("Logged out successfully");
+        toast.success("You've been logged out");
       }
     } catch (error) {
       set((state) => ({ loading: false }));
