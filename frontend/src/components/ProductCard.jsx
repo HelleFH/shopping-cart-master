@@ -11,7 +11,7 @@ const ProductCard = ({ item }) => {
   };
   return (
     <div className="flex items-center bg-white relative flex-col justify-between p-[10px] shadow-md rounded-[1px]">
-      <div className="h-[150px] sm:h-[200px]">
+      <div className="">
         <img
           src={item.image}
           onClick={() => navigate(`/product/${item.id}`)}
