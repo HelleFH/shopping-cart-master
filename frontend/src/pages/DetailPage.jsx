@@ -34,10 +34,11 @@ const DetailPage = () => {
           <>
             {singleProduct ? (
               <>
-                <div className="flex w-full items-center justify-center">
+                <div style={{ maxWidth: "500px !important" }} className="flex w-90 items-center justify-center">
                   <img
+                  
                     src={singleProduct?.image}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full max-w-2xl  object-contain"
                     alt=""
                   />
                 </div>
