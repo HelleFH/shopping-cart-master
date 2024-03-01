@@ -30,11 +30,11 @@ const DetailPage = () => {
   return (
     <Layout>
       <div className="flex flex-col justify-center items-center w-full min-h-screen">
-        <div className="py-[25px] w-full md:w-[90%] mx-auto rounded-xl bg-white px-2 flex h-fit flex-col gap-[60px] md:flex-row">
+        <div className="py-[25px] items-center w-full md:w-[90%] mx-auto rounded-xl bg-white px-2 flex h-fit flex-col gap-[60px] md:flex-row">
           <>
             {singleProduct ? (
               <>
-                <div className="flex h-[320px] w-full items-center justify-center  md:w-[450px]">
+                <div className="flex w-full items-center justify-center">
                   <img
                     src={singleProduct?.image}
                     className="h-full w-full object-contain"

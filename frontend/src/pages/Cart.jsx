@@ -36,7 +36,7 @@ const Cart = () => {
             <h2 className="text-[18px] font-[700]">Your Cart</h2>
             <h3>Total Itemes : {cart?.length} </h3>
           </div>
-          <div className="flex flex-col gap-3 lg:ml-[120px]">{displaycart}</div>
+          <div className="flex flex-col gap-2">{displaycart}</div>
           {!cart?.length && (
             <div className="flex flex-col justify-center items-center">
               <p className="text-[24px] text-black font-bold">cart is empty</p>{" "}

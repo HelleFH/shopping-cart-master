@@ -11,7 +11,13 @@ const CartCard = ({ item }) => {
   };
   const navigate = useNavigate();
   return (
-    <div className="grid grid-cols-4 h-full bg-white gap-[5px] border-b-[1px] pb-[10px] w-full">
+    <div className="grid grid-cols-5 h-full content-center items-center bg-white gap-[5px] border-b-[1px] pb-[10px] w-full">
+           <h2
+          onClick={() => removeCart(item.product.id)}
+          className="cursor-pointer text-left pl-3 text-red-500"
+        >
+          Remove
+        </h2>
       <div className="h-[80px] w-[80px]">
         <img
           onClick={() => navigate(`/product/${item.product.id}`)}
@@ -28,7 +34,7 @@ const CartCard = ({ item }) => {
           {productName(item.product.title)}
         </h2>
       </div>
-      <div className="flex h-full justify-center">
+      <div className="flex h-full items-center justify-center">
         <div
           onClick={() => {
             item.quantity === 1
@@ -42,7 +48,7 @@ const CartCard = ({ item }) => {
           </span>
         </div>
         <h2 className="px-2 font-semibold">{item?.quantity}</h2>
-        <div>
+        
           <button
             onClick={() => addCartQty(item.product.id)}
             className=" relative md:h-[30px] md:w-[30px] h-[24px] w-[24px] items-center justify-center rounded-full border-[1px] p-[2px] text-center text-[18px]"
@@ -51,7 +57,7 @@ const CartCard = ({ item }) => {
               <HiPlus size={12} />
             </span>
           </button>
-        </div>
+        
       </div>
       <div className="flex text-right max-w-[120px] flex-col justify-between">
         <h2 className="ml-[20px] text-center font-semibold ">
@@ -60,12 +66,7 @@ const CartCard = ({ item }) => {
             {Math.ceil(item.product.price)}
           </span>
         </h2>
-        <h2
-          onClick={() => removeCart(item.product.id)}
-          className="cursor-pointer text-right text-red-500"
-        >
-          Remove
-        </h2>
+   
       </div>
     </div>
   );

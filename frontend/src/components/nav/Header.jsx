@@ -30,9 +30,8 @@ const Header = () => {
       <div >
         <div className="flex justify-center items-center gap-2" onClick={() => navigate("/")}>
 
-          <img src="\public\logo-color.png" style={{ maxWidth: "100px" }}></img>
           <h2
-            className="font-extrabold hover:text-gray-400 text-[26px] cursor-pointer tracking-wide sm:tracking-widest">Home  </h2>
+            className="font-extrabold hover:text-gray-400 text-[32px] cursor-pointer tracking-wide sm:tracking-widest" style={{ fontFamily:'Cormorant' }}>Home  </h2>
         </div>
       </div>
       <div className="hidden sm:block">

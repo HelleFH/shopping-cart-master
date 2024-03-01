@@ -66,7 +66,11 @@ const Register = () => {
               className="text-blue-500 underline cursor-pointer ml-1"
             >
               Login
+              <br>
+            </br>  
+            
             </span>
+       
           </p>
 
           {formValues.map((item, id) => (
@@ -85,7 +89,7 @@ const Register = () => {
 
           <button style={{ backgroundColor: "#ca9176", color: "#F0F0F0" }}
             type="submit"
-            className="text-lg bg-black py-4 border-2 border-black font-semibold w-full mt-6 hover:bg-gray-800 transition-all duration-300"
+            className="text-lg bg-black py-4 font-semibold w-full mt-6 hover:bg-gray-800 transition-all duration-300"
           >
             Register
           </button>

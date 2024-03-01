@@ -40,11 +40,14 @@ const Login = () => {
 
           <p onClick={() => navigate("/register")} className="pt-6">
             Don't have an account?
-            <span className="text-blue-500 underline cursor-pointer">
+            <span className="ml-2 text-blue-500 underline cursor-pointer">
               Get Started
             </span>
           </p>
-
+          Email: name@mail.com
+            <br>
+            </br>  
+            Password: password
           <InputField
             handleChange={handleChange}
             name={"email"}
@@ -65,9 +68,7 @@ const Login = () => {
             touched={touched}
             handleBlur={handleBlur}
           />
-          <h2 className="text-blue-500 py-3 underline text-right cursor-pointer">
-            forgot-password
-          </h2>
+     
           <button style={{ backgroundColor: "#ca9176", color: "#F0F0F0" }}
             type="submit"
             className="text-[18px] hover:bg-black hover:text-white my-4 w-full py-4  font-semibold"
