@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin:  'https://shopping-cart-master-fe.onrender.com',
+    origin:  'https://shopping-cart-master-1-5ylu.onrender.com',
     credentials: true,
     methods: "PUT,POST,GET,DELETE,PATCH,HEAD",
   })
